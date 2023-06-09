@@ -1,0 +1,130 @@
+
+
+<div [ngClass]="{ container: true }">
+  <h2>Wyszukiwarka lotów</h2>
+  <form>
+    <div [ngClass]="{ loginBox: true }">
+      <label>Skąd:</label>
+      <select name="departure" [(ngModel)]="departure" required>
+        <option>Kraków</option>
+      </select>
+    </div>
+
+    <div [ngClass]="{ loginBox: true }">
+      <label>Dokąd:</label>
+      <select name="destination" [(ngModel)]="destination" required>
+        <option>Warszawa</option>
+        <option>Los Angeles</option>
+        <option>Paryż</option>
+      </select>
+    </div>
+
+    <div [ngClass]="{ loginBox: true }">
+      <label>Wylot:</label>
+      <input
+        type="date"
+        name="departureDate"
+        [(ngModel)]="departureDate"
+        [min]="currentDate"
+        [max]="maxDate"
+        required
+      />
+    </div>
+
+    <div [ngClass]="{ loginBox: true }">
+      <label>Powrót:</label>
+      <input
+        type="date"
+        name="returnDate"
+        [(ngModel)]="returnDate"
+        [min]="departureDate"
+        [max]="maxDate"
+        required
+      />
+    </div>
+
+    <div [ngClass]="{ loginBox: true }">
+      <label for="numberOfPassengers">Liczba pasażerów</label>
+      <br />
+      <input
+        type="number"
+        name="numberOfPassengers"
+        placeholder="1"
+        [(ngModel)]="numberOfPassengers"
+        min="1"
+        required
+      />
+    </div>
+
+    <button (click)="searchFlights()" [ngClass]="{ searchButton: true }">
+      Szukaj
+    </button>
+  </form>
+  <h3>Wyniki wyszukiwania:</h3>
+  <div [ngClass]="{resultBox: true }" *ngIf="searchResults.length > 0">
+    <div *ngFor="let flight of searchResults">
+      <table>
+        <tr>
+          <th>Numer lotu</th>
+          <th>Skąd</th>
+          <th>Data wylotu</th>
+          <th>Czas wylotu</th>
+          <th>Dokąd</th>
+          <th>Data przylotu</th>
+          <th>Czas przylotu</th>
+          <th>Długość lotu</th>
+          <th>Liczba pasażerów</th>
+          <th>Cena</th>
+        </tr>
+        <tr>
+          <td>{{ flight.flightNumber }}</td>
+          <td>{{ flight.departure }}</td>
+          <td>{{ departureDate }}</td>
+          <td>{{ flight.departureTime }}</td>
+          <td>{{ flight.destination }}</td>
+          <td>{{ departureDate }}</td>
+          <td>{{ flight.arrivalTime }}</td>
+          <td>{{ flight.flightTime }}</td>
+          <td>{{ numberOfPassengers }}</td>
+          <td>
+            {{ flight.ticketPrice * numberOfPassengers | currency : "PLN" }}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div *ngFor="let flight of searchResults">
+      <table>
+        <tr>
+          <th>Numer lotu</th>
+          <th>Skąd</th>
+          <th>Data wylotu</th>
+          <th>Czas wylotu</th>
+          <th>Dokąd</th>
+          <th>Data przylotu</th>
+          <th>Czas przylotu</th>
+          <th>Długość lotu</th>
+          <th>Liczba pasażerów</th>
+          <th>Cena</th>
+        </tr>
+        <tr>
+          <td>{{ flight.returnFlightNumber }}</td>
+          <td>{{ flight.destination }}</td>
+          <td>{{ returnDate }}</td>
+          <td>{{ flight.returnTime }}</td>
+          <td>{{ flight.departure }}</td>
+          <td>{{ returnDate }}</td>
+          <td>{{ flight.returnArrivalTime }}</td>
+          <td>{{ flight.flightTime }}</td>
+          <td>{{ numberOfPassengers }}</td>
+          <td>
+            {{ flight.ticketPrice * numberOfPassengers | currency : "PLN" }}
+          </td>
+        </tr>
+      </table>
+      
+    </div>
+    <button [ngClass]="{ chooseButton: true }" [routerLink]="['/login']">Wybierz</button>
+  </div>
+  <p *ngIf="searchResults.length === 0">Brak wyników wyszukiwania</p>
+</div>
+

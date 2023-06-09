@@ -1,0 +1,100 @@
+.container {
+ background-color: white;
+  // min-height: 150px;
+   max-width: 900px; 
+  border-radius: 20px;
+  box-shadow: #75a8d7 10px 10px;
+  color: #0d0516;
+  padding: 20px;
+  margin: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+p {
+  color: #75A8D7;
+
+}
+
+
+.loginBox {
+  width: 100px;
+  height: 100px;
+  background-color: #0d0516;
+  color: #75a8d7;
+  border-right: 4px solid #75a8d7;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+input {
+  width: 100px;
+  border: 0px;
+  background-color: #0d0516;
+  font-size: 13px;
+  color: white;
+}
+select {
+  height: 50px;
+  width: 100px;
+  border: none;
+  font-size: 15px;
+  background-color: #0d0516;
+  color: white;
+}
+
+.searchButton {
+  background-color: #75a8d7;
+  color: white;
+  width: 124px;
+  height: 120px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  border-right: 4px solid #0d0516;
+  margin: 10px 5px;
+}
+
+table {
+  background-color: #75a8d7;
+  color: #0d0516;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+  
+}
+
+.resultBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+tr {
+  background-color: #0d0516;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+.chooseButton {
+  background-color: #0d0516;
+  color: white;
+  width: 124px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  border-right: 4px solid #75a8d7;
+  margin: 10px;
+}
