@@ -8,25 +8,5 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./flight.component.scss'],
 })
 export class FlightComponent  {
-  // selectedDestination!: string;
-  // selectedNumberOfPassengers!: number;
-  // private destinationSubscription!: Subscription;
-  // private numberOfPassengersSubscription!: Subscription;
-  // constructor(private dataService: DataService) {}
-  // ngOnInit() {
-  //   this.destinationSubscription = this.dataService
-  //     .getSelectedDestination()
-  //     .subscribe((destination) => {
-  //       this.selectedDestination = destination;
-  //     });
-  //   this.numberOfPassengersSubscription = this.dataService
-  //     .getSelectedNumberOfPassengers()
-  //     .subscribe((numberOfPassengers) => {
-  //       this.selectedNumberOfPassengers = numberOfPassengers;
-  //     });
-  // }
-  // ngOnDestroy() {
-  //   this.destinationSubscription.unsubscribe();
-  //   this.numberOfPassengersSubscription.unsubscribe();
-  // }
+
 }

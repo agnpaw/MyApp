@@ -1,8 +1,8 @@
-
-
 <div [ngClass]="{ container: true }">
-  <h2>Wyszukiwarka lotów</h2>
-  <form>
+  <h2>Wyszukaj lot:</h2>
+
+  <form  #addUserForm="ngForm" (submit)="addCustomer(addUserForm)">
+
     <div [ngClass]="{ loginBox: true }">
       <label>Skąd:</label>
       <select name="departure" [(ngModel)]="departure" required>
@@ -12,7 +12,12 @@
 
     <div [ngClass]="{ loginBox: true }">
       <label>Dokąd:</label>
-      <select name="destination" [(ngModel)]="destination" (change)="setDestination()" required>
+      <select
+        name="destination"
+        [(ngModel)]="destination"
+        (change)="setDestination()"
+        required
+      >
         <option value="Warszawa">Warszawa</option>
         <option value="Los Angeles">Los Angeles</option>
         <option value="Paryż">Paryż</option>
@@ -57,12 +62,14 @@
       />
     </div>
 
-    <button (click)="searchFlights()" [ngClass]="{ searchButton: true }">
+    <button (click)="searchFlights()" [ngClass]="{ searchButton: true }" type="submit" [disabled]="!addUserForm.valid">
       Szukaj
     </button>
   </form>
+
+
   <h3>Wyniki wyszukiwania:</h3>
-  <div [ngClass]="{resultBox: true }" *ngIf="searchResults.length > 0">
+  <div [ngClass]="{ resultBox: true }" *ngIf="searchResults.length > 0">
     <div *ngFor="let flight of searchResults">
       <table>
         <tr>
@@ -118,14 +125,33 @@
           <td>{{ flight.flightTime }}</td>
           <td>{{ numberOfPassengers }}</td>
           <td>
-            {{ flight.ticketPrice * numberOfPassengers | currency : "PLN" }}
+            {{ flight.ticketPrice  * numberOfPassengers  | currency : "PLN" }}
           </td>
         </tr>
       </table>
-      
+
+      <div>
+        <h3>Wybór bagażu:</h3>
+        <label *ngFor="let option of options">
+          <ul>
+            <li>
+          <input type="radio" name="radioOptions" [value]="option.price" [(ngModel)]="selectedOption">
+          {{ option.label }} - {{ option.price * numberOfPassengers| currency : "PLN" }} 
+        Razem:  <b>{{(option.price * numberOfPassengers) + (flight.ticketPrice * numberOfPassengers * 2) | currency : "PLN"}}</b>
+        </li>
+  
+        </ul>
+    
+        </label>
+    
+
+ 
+
+      </div>
     </div>
-    <button [ngClass]="{ chooseButton: true }" [routerLink]="['/login']">Wybierz</button>
+    <button [ngClass]="{ chooseButton: true }" [routerLink]="['/login']">
+      Wybierz
+    </button>
   </div>
   <p *ngIf="searchResults.length === 0">Brak wyników wyszukiwania</p>
 </div>
-

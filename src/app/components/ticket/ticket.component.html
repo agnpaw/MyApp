@@ -1,64 +1,111 @@
-<p>ticket works!</p>
-
-<!-- <app-flight></app-flight> -->
 
 
 <div [ngClass]="{ container: true }">
-<div>Lot z Krakowa do {{selectedDestination}} </div>
-<div> Liczba pasażerów {{selectedNumberOfPassengers}}</div>
+  <h2>Lot z Krakowa do {{ selectedDestination }}</h2>
+  <div>Liczba pasażerów {{ selectedNumberOfPassengers }}</div>
+
+  <div>
+    <h3>Zarezerwuj miejsce</h3>
+
+    <div *ngIf="selectedDestination === 'Warszawa'">
+      <img [src]="srcOne" alt="samolot1" />
+      <div>
+        <label>Liczba miejsc:</label>
+        <input type="number" min="1" [(ngModel)]="passengerCount" />
+        <div *ngIf="passengerCount > 0">
+
+          <div *ngIf="passengerCount !== selectedNumberOfPassengers">
+            <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+          </div>
 
 
-<div>
-    <div>Zarezerwuj miejsce</div>
-    
- 
-      <div *ngIf="selectedDestination === 'Warszawa'">
-        <img [src]="srcOne" alt="samolot1">
+          <h3>Przypisz miejsce:</h3>
+          <div *ngFor="let passenger of passengers">
+            <h4>Pasażer {{ passenger.id }}</h4>
+            <div>Wybierz miejsce w klasie ekonomicznej:</div>
+            <select [(ngModel)]="passenger.seat">
+              <option *ngFor="let seat1 of seats1" [value]="seat1">
+                {{ seat1 }}
+              </option>
+            </select>
+          </div>
+          <button (click)="assignSeats()">Wybierz miejsce</button>
+          <h3>Wybrane miejsce:</h3>
+          <ul>
+            <li *ngFor="let passenger of passengers">
+              Pasażer {{ passenger.id }} - {{ passenger.seat }}
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div *ngIf="selectedDestination == 'Paryż'">
-        <img [src]="srcTwo" alt="samolot2">
-      </div>
-
-      <div *ngIf="selectedDestination === 'Los Angeles'">
-        <img [src]="srcThree" alt="samolot3">
-      </div>
-
-
-    <div>
-      <label>Liczba miejsc:</label>
-      <input type="number" min="1" [(ngModel)]="passengerCount">
     </div>
-    
-    <div *ngIf="passengerCount > 0">
-      <h3>Przypisz miejsce:</h3>
-      <div *ngFor="let passenger of passengers">
-        <h4>Pasażer {{ passenger.id }}</h4>
-        <div>Wybierz miejsce:</div>
-        <select [(ngModel)]="passenger.seat">
-          <option *ngFor="let seat of seats" [value]="seat">{{ seat }}</option>
-        </select>
+
+    <div *ngIf="selectedDestination == 'Paryż'">
+      <img [src]="srcTwo" alt="samolot2" />
+      <div>
+        <label>Liczba miejsc:</label>
+        <input type="number" min="1" [(ngModel)]="passengerCount" />
+        <div *ngIf="passengerCount > 0">
+
+          <div *ngIf="passengerCount !== selectedNumberOfPassengers">
+            <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+          </div>
+          <h3>Przypisz miejsce:</h3>
+          <div *ngFor="let passenger of passengers">
+            <h4>Pasażer {{ passenger.id }}</h4>
+            <div>Wybierz miejsce w klasie ekonomicznej:</div>
+            <select [(ngModel)]="passenger.seat">
+              <option *ngFor="let seat2 of seats2" [value]="seat2">
+                {{ seat2 }}
+              </option>
+            </select>
+          </div>
+          <button (click)="assignSeats()">Wybierz miejsce</button>
+          <h3>Wybrane miejsce:</h3>
+          <ul>
+            <li *ngFor="let passenger of passengers">
+              Pasażer {{ passenger.id }} - {{ passenger.seat }}
+            </li>
+          </ul>
+        </div>
       </div>
-      
-      <button (click)="assignSeats()">Wybierz miejsce</button>
-
-
-
-
-
-     
-
-
-      
-      <h3>Wybrane miejsce:</h3>
-      <ul>
-        <li *ngFor="let passenger of passengers">
-          Pasażer {{ passenger.id }} - {{ passenger.seat }}
-        </li>
-      </ul>
-     
-     
     </div>
+
+    <div *ngIf="selectedDestination === 'Los Angeles'">
+      <img [src]="srcThree" alt="samolot3" />
+      <div>
+        <label>Liczba miejsc:</label>
+        <input type="number" min="1" [(ngModel)]="passengerCount" />
+      </div>
+      <div *ngIf="passengerCount > 0">
+
+        <div *ngIf="passengerCount !== selectedNumberOfPassengers">
+          <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+        </div>
+        <div *ngFor="let passenger of passengers">
+          <h4>Pasażer {{ passenger.id }}</h4>
+          <div>Wybierz miejsce w klasie ekonomicznej:</div>
+          <select [(ngModel)]="passenger.seat">
+            <option *ngFor="let seat3 of seats3" [value]="seat3">
+              {{ seat3 }}
+            </option>
+          </select>
+        </div>
+
+        <button (click)="assignSeats()">Wybierz miejsce</button>
+
+        <h3>Wybrane miejsce:</h3>
+        <ul>
+          <li *ngFor="let passenger of passengers">
+            Pasażer {{ passenger.id }} - {{ passenger.seat }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
+
+  <button [ngClass]="{ bookingButton: true }" [routerLink]="['/flight']">
+    Zarezerwuj
+  </button>
 </div>
- 

@@ -13,6 +13,7 @@ import { TicketComponent } from './components/ticket/ticket.component';
 import { TicketRoutingModule } from './ticket-routing.module';
 import { DataService } from './data.service';
 import { FlightComponent } from './components/flight/flight.component';
+import { FlightRoutingModule } from './flight-routing.module';
 
 
 
@@ -35,7 +36,8 @@ import { FlightComponent } from './components/flight/flight.component';
     CommonModule,
     HttpClientModule,
     RouterModule,
-    TicketRoutingModule
+    TicketRoutingModule,
+    FlightRoutingModule
   
   ],
   providers: [DataService],

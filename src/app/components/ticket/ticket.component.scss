@@ -1,15 +1,59 @@
 .container {
     background-color: white;
-    //  min-height: 150px;
-    // min-width: 600px;
       max-width: 900px; 
      border-radius: 20px;
      box-shadow: #75a8d7 10px 10px;
      color: #0d0516;
      padding: 20px;
      margin: 50px;
+
+    //  justify-content: center;
+    //  align-items: center;
+    //  display: flex;
+    //  flex-wrap: wrap; 
    }
 
 img {
     max-width: 700px;
+}
+button {
+  background-color:  #75a8d7;
+  color: white;
+  width: 124px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  border-right: 4px solid #0D0516;
+  margin: 10px;
+}
+
+p {
+  color:   #75a8d7;
+
+}
+
+input {
+  width: 150px;
+  border: 0px;
+  background-color:  #0D0516;
+  font-size: 13px;
+  color: white;
+}
+
+select {
+    background-color:  #0D0516;
+    color: white;
+}
+
+.bookingButton {
+  background-color: #0D0516;
+  color: white;
+  width: 150px;
+  height: 60px;
+  font-size: 15px;
+  border-radius: 30px;
+  padding: 10px;
+  border-right: 4px solid  #75a8d7;
+  margin: 10px;
+  padding: 40 px;
 }

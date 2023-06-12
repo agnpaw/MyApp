@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  private selectedDestination: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  private selectedNumberOfPassengers: BehaviorSubject<number> = new BehaviorSubject<number>(1);
+  private selectedDestination: BehaviorSubject<string> =
+    new BehaviorSubject<string>('');
+  private selectedNumberOfPassengers: BehaviorSubject<number> =
+    new BehaviorSubject<number>(1);
 
   setSelectedDestination(destination: string) {
     this.selectedDestination.next(destination);

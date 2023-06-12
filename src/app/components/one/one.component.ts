@@ -1,4 +1,6 @@
 import { Component, Directive } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { DataService } from 'src/app/data.service';
 
 interface Flight {
@@ -30,9 +32,8 @@ export class OneComponent {
   maxDate: string = '';
   name: string = '';
   date: any = new Date();
-
- 
-
+  selectedOption!: number;
+  
 
   flights: Flight[] = [
     {
@@ -72,7 +73,6 @@ export class OneComponent {
       ticketPrice: 400,
     },
   ];
- 
 
   constructor(private dataService: DataService) {
     this.currentDate = new Date().toISOString().split('T')[0];
@@ -97,4 +97,15 @@ export class OneComponent {
     this.dataService.setSelectedNumberOfPassengers(this.numberOfPassengers);
   }
 
+  options = [
+    { label: 'Bagaż kabinowy 8 kg', price: 0 },
+    { label: 'Bagaż rejestrowany 23 kg, bagaż kabinowy 8 kg', price: 100 },
+    { label: 'Bagaż rejestrowany 30 kg, bagaż kabinowy 8 kg', price: 200 },
+  ];
+
+
+  addCustomer(formValue:NgForm){
+    console.log(formValue.value)
+    console.log(formValue.valid)
+  }
 }
