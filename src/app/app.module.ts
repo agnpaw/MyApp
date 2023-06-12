@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { TicketRoutingModule } from './ticket-routing.module';
 import { DataService } from './data.service';
+import { FlightComponent } from './components/flight/flight.component';
 
 
 
@@ -22,6 +23,7 @@ import { DataService } from './data.service';
     OneComponent,
     LoginComponent,
     TicketComponent,
+    FlightComponent,
  
    
   ],

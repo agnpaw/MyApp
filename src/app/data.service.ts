@@ -1,21 +1,27 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  private selectedDestination: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private selectedNumberOfPassengers: BehaviorSubject<number> = new BehaviorSubject<number>(1);
 
-//   private selectedCitySubject = new BehaviorSubject<string>('');
-  
-//   selectedCity$ = this.selectedCitySubject.asObservable();
-  
+  setSelectedDestination(destination: string) {
+    this.selectedDestination.next(destination);
+  }
 
-//   setSelectedCity(city: string): void {
-//     this.selectedCitySubject.next(city);
-//   }
+  getSelectedDestination(): Observable<string> {
+    return this.selectedDestination.asObservable();
+  }
 
- 
+  setSelectedNumberOfPassengers(numberOfPassengers: number) {
+    this.selectedNumberOfPassengers.next(numberOfPassengers);
+  }
 
+  getSelectedNumberOfPassengers(): Observable<number> {
+    return this.selectedNumberOfPassengers.asObservable();
+  }
 }

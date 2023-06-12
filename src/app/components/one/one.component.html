@@ -12,10 +12,10 @@
 
     <div [ngClass]="{ loginBox: true }">
       <label>Dokąd:</label>
-      <select name="destination" [(ngModel)]="destination" required>
-        <option>Warszawa</option>
-        <option>Los Angeles</option>
-        <option>Paryż</option>
+      <select name="destination" [(ngModel)]="destination" (change)="setDestination()" required>
+        <option value="Warszawa">Warszawa</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Paryż">Paryż</option>
       </select>
     </div>
 
@@ -53,6 +53,7 @@
         [(ngModel)]="numberOfPassengers"
         min="1"
         required
+        (change)="setNumberOfPassengers()"
       />
     </div>
 
