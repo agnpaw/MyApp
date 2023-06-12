@@ -1,0 +1,10 @@
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 575px) {
+  p {
+    margin: 0px;
+  }
+}

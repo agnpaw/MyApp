@@ -1,7 +1,6 @@
 .container {
- background-color: white;
-  // min-height: 150px;
-   max-width: 900px; 
+  background-color: white;
+  max-width: 900px;
   border-radius: 20px;
   box-shadow: #75a8d7 10px 10px;
   color: #0d0516;
@@ -17,10 +16,8 @@ form {
 }
 
 p {
-  color: #75A8D7;
-
+  color: #75a8d7;
 }
-
 
 .loginBox {
   width: 100px;
@@ -69,15 +66,13 @@ table {
   padding: 5px;
   border-radius: 10px;
   margin: 10px;
-  
 }
 
-.resultBox{
+.resultBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 tr {
@@ -101,4 +96,5 @@ tr {
 
 ul {
   list-style-type: none;
+  padding: 0px;
 }

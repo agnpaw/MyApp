@@ -1,0 +1,12 @@
+<div *ngIf="weather" [ngClass]="{ weather: true }">
+  <p>Pogoda w Krakowie:</p>
+  <p>Temperatura: {{ (weather.main.temp - 273.15).toFixed(0) }} °C</p>
+  <p>Wilgotność: {{ weather.main.humidity }}%</p>
+  <p>Ciśnienie: {{ weather.main.pressure }} hPa</p>
+  <img
+    [src]="
+      'https://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'
+    "
+    alt="Weather Icon"
+  />
+</div>

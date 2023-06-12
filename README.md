@@ -1,6 +1,6 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3. The project was made to complete postgraduate studies in the field of Frontend Developer with Angular at the Andrzej Frycz Modrzewski Krakow University. The aim of the project was to create a flight search engine
 
 ## Development server
 

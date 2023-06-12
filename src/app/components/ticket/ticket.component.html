@@ -1,5 +1,3 @@
-
-
 <div [ngClass]="{ container: true }">
   <h2>Lot z Krakowa do {{ selectedDestination }}</h2>
   <div>Liczba pasażerów {{ selectedNumberOfPassengers }}</div>
@@ -13,11 +11,11 @@
         <label>Liczba miejsc:</label>
         <input type="number" min="1" [(ngModel)]="passengerCount" />
         <div *ngIf="passengerCount > 0">
-
           <div *ngIf="passengerCount !== selectedNumberOfPassengers">
-            <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+            <p>
+              Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc
+            </p>
           </div>
-
 
           <h3>Przypisz miejsce:</h3>
           <div *ngFor="let passenger of passengers">
@@ -46,9 +44,10 @@
         <label>Liczba miejsc:</label>
         <input type="number" min="1" [(ngModel)]="passengerCount" />
         <div *ngIf="passengerCount > 0">
-
           <div *ngIf="passengerCount !== selectedNumberOfPassengers">
-            <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+            <p>
+              Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc
+            </p>
           </div>
           <h3>Przypisz miejsce:</h3>
           <div *ngFor="let passenger of passengers">
@@ -78,9 +77,10 @@
         <input type="number" min="1" [(ngModel)]="passengerCount" />
       </div>
       <div *ngIf="passengerCount > 0">
-
         <div *ngIf="passengerCount !== selectedNumberOfPassengers">
-          <p>Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc</p>
+          <p>
+            Uwaga, liczba pasażerów nie równa się liczbie przypisanych miejsc
+          </p>
         </div>
         <div *ngFor="let passenger of passengers">
           <h4>Pasażer {{ passenger.id }}</h4>
@@ -102,7 +102,6 @@
         </ul>
       </div>
     </div>
-
   </div>
 
   <button [ngClass]="{ bookingButton: true }" [routerLink]="['/flight']">

@@ -4,21 +4,15 @@ import { TicketComponent } from './components/ticket/ticket.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FlightComponent } from './components/flight/flight.component';
 
-const routes:Routes = [
-  {path: '', redirectTo: 'ticket', pathMatch: 'full'},
-  {path: 'ticket', component: TicketComponent},
-  {path: 'flight', component: FlightComponent},
-
-]
-
-
+const routes: Routes = [
+  { path: '', redirectTo: 'ticket', pathMatch: 'full' },
+  { path: 'ticket', component: TicketComponent },
+  { path: 'flight', component: FlightComponent },
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   declarations: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FlightRoutingModule { }
+export class FlightRoutingModule {}

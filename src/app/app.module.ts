@@ -14,6 +14,8 @@ import { TicketRoutingModule } from './ticket-routing.module';
 import { DataService } from './data.service';
 import { FlightComponent } from './components/flight/flight.component';
 import { FlightRoutingModule } from './flight-routing.module';
+import { WeatherComponent } from './components/weather/weather.component';
+
 
 
 
@@ -25,6 +27,7 @@ import { FlightRoutingModule } from './flight-routing.module';
     LoginComponent,
     TicketComponent,
     FlightComponent,
+    WeatherComponent,
  
    
   ],
@@ -37,7 +40,8 @@ import { FlightRoutingModule } from './flight-routing.module';
     HttpClientModule,
     RouterModule,
     TicketRoutingModule,
-    FlightRoutingModule
+    FlightRoutingModule,
+
   
   ],
   providers: [DataService],

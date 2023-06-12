@@ -12,10 +12,7 @@ export class LoginComponent implements OnInit {
   loginError = false;
   loggedIn = false;
 
-
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
-    
-  }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({

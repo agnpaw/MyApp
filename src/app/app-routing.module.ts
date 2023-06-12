@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'one', pathMatch: 'full'},
+  { path: '', redirectTo: 'one', pathMatch: 'full' },
   { path: 'one', component: OneComponent },
   { path: 'login', component: LoginComponent },
 ];
@@ -16,5 +16,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-

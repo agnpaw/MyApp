@@ -33,7 +33,6 @@ export class OneComponent {
   name: string = '';
   date: any = new Date();
   selectedOption!: number;
-  
 
   flights: Flight[] = [
     {
@@ -103,9 +102,8 @@ export class OneComponent {
     { label: 'Bagaż rejestrowany 30 kg, bagaż kabinowy 8 kg', price: 200 },
   ];
 
-
-  addCustomer(formValue:NgForm){
-    console.log(formValue.value)
-    console.log(formValue.valid)
+  addCustomer(formValue: NgForm) {
+    console.log(formValue.value);
+    console.log(formValue.valid);
   }
 }
