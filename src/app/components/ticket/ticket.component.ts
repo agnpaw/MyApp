@@ -15,9 +15,9 @@ interface Passenger {
 export class TicketComponent {
   ticketPrice: number | undefined;
 
-  srcOne = '/assets/samolot1.jpg';
-  srcTwo = '/assets/samolot2.jpg';
-  srcThree = '/assets/samolot3.jpg';
+  srcOne = 'assets/samolot1.jpg';
+  srcTwo = 'assets/samolot2.jpg';
+  srcThree = 'assets/samolot3.jpg';
   selectedCity!: string;
   passengerCount: number = 0;
   passengers: Passenger[] = [];
