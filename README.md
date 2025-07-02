@@ -7,13 +7,13 @@ Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w 
 ## 🌐 Demo online
 
 Przetestuj aplikację na żywo pod adresem:  
-[https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/](https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/)
+
 
 ---
 
 ## 🖼️ Screenshot
 
-![Screenshot aplikacji Flight Search Engine](https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/assets/screenshot.png)
+
 
 ---
 
