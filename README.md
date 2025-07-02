@@ -1,27 +1,41 @@
-# MyApp
+# ✈️ Flight Search Engine — Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3. The project was made to complete postgraduate studies in the field of Frontend Developer with Angular at the Andrzej Frycz Modrzewski Krakow University. The aim of the project was to create a flight search engine
+Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w prostym interfejsie zbudowanym w Angularze. Projekt został stworzony na zaliczenie końcowe studiów podyplomowych Frontend Developer z Angularem na Uniwersytecie Frycza Modrzewskiego w Krakowie.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌐 Demo online
 
-## Code scaffolding
+Przetestuj aplikację na żywo pod adresem:  
+[https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/](https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🖼️ Screenshot
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Screenshot aplikacji Flight Search Engine](https://agnpaw.github.io/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR/assets/screenshot.png)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Funkcje
 
-## Running end-to-end tests
+- Wyszukiwanie lotów 
+- Wyświetlanie listy dostępnych lotów  
+- Wybór lotu  
+- Responsywny i intuicyjny interfejs
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🛠️ Technologie
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular  
+- TypeScript, HTML, CSS  
+- Mockowane dane lotów (możliwość rozbudowy o API)  
+
+
+## 📦 Instalacja i uruchomienie lokalne
+
+1. Sklonuj repozytorium:  
+   ```bash
+   git clone https://github.com/agnpaw/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR.git
+   cd -FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR
