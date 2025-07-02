@@ -4,20 +4,20 @@ Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w 
 
 ---
 
-## 🌐 Demo online
+##  Demo online
 
 Przetestuj aplikację na żywo pod adresem:  
 
 
 ---
 
-## 🖼️ Screenshot
+## 🖼 Screenshot
 
 
 
 ---
 
-## 🚀 Funkcje
+##  Funkcje
 
 - Wyszukiwanie lotów 
 - Wyświetlanie listy dostępnych lotów  
@@ -26,14 +26,14 @@ Przetestuj aplikację na żywo pod adresem:
 
 ---
 
-## 🛠️ Technologie
+## 🛠 Technologie
 
 - Angular  
 - TypeScript, HTML, CSS  
 - Mockowane dane lotów (możliwość rozbudowy o API)  
 
 
-## 📦 Instalacja i uruchomienie lokalne
+##  Instalacja i uruchomienie lokalne
 
 1. Sklonuj repozytorium:  
    ```bash
