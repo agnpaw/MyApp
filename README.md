@@ -41,4 +41,8 @@ Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w 
 2. `ng serve` 
  `http://localhost:4200/`
 
+3. Logowanie:
+   login: user
+   hasło: user123
+
 
