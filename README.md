@@ -38,8 +38,9 @@ Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w 
    git clone https://github.com/agnpaw/flight_search_engine_angular_app.git
    cd flight_search_engine_angular_app
 
-`npm install`
-`ng serve` 
+2.
+   `npm install`
+  `ng serve` 
 `http://localhost:4200/`
 
 
