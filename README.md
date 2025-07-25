@@ -1,27 +1,44 @@
-# MyApp
+# ✈️ Flight Search Engine — Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3. The project was made to complete postgraduate studies in the field of Frontend Developer with Angular at the Andrzej Frycz Modrzewski Krakow University. The aim of the project was to create a flight search engine
+Aplikacja **Flight Search Engine** pozwala na wyszukiwanie dostępnych lotów w prostym interfejsie zbudowanym w Angularze. Projekt został stworzony na zaliczenie końcowe studiów podyplomowych Frontend Developer z Angularem na Uniwersytecie Frycza Modrzewskiego w Krakowie.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## 🖼 Screenshot
+<img width="1911" height="895" alt="Zrzut ekranu 2025-07-25 o 11 46 14" src="https://github.com/user-attachments/assets/72e5f621-6597-4451-b686-5847886d1c68" />
+<img width="1916" height="951" alt="Zrzut ekranu 2025-07-25 o 11 46 35" src="https://github.com/user-attachments/assets/89313a05-a761-413d-a6a1-1ac5aee3d818" />
+<img width="1913" height="866" alt="Zrzut ekranu 2025-07-25 o 11 46 45" src="https://github.com/user-attachments/assets/49d4e666-13b0-4a53-b19e-3b3caf6dd0a6" />
+<img width="1915" height="934" alt="Zrzut ekranu 2025-07-25 o 11 47 29" src="https://github.com/user-attachments/assets/926941d0-f039-4ce5-8dde-85495671e312" />
+<img width="1904" height="950" alt="Zrzut ekranu 2025-07-25 o 11 47 46" src="https://github.com/user-attachments/assets/5338393e-bc79-492d-9ae8-1221a0e840bf" />
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##  Funkcje
 
-## Running unit tests
+- Wyszukiwanie lotów 
+- Wyświetlanie listy dostępnych lotów  
+- Wybór lotu  
+- Responsywny i intuicyjny interfejs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 🛠 Technologie
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular  
+- TypeScript, HTML, CSS  
+- Mockowane dane lotów (możliwość rozbudowy o API)  
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##  Instalacja i uruchomienie lokalne
+
+1. Sklonuj repozytorium:  
+   ```bash
+   git clone https://github.com/agnpaw/-FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR.git
+   cd -FLIGHT-SEARCH-ENGINE-BUILT-IN-ANGULAR
+
+2. `ng serve` 
+ `http://localhost:4200/`
+
+
